@@ -3,16 +3,16 @@ import axios from "axios";
 import "components/Application.scss";
 import DayList from "components/DayList.js"
 import Appointment from "components/Appointment/index.js";
+import { getAppointmentsForDay } from "helpers/selectors";
 
 export default function Application(props) {
   const [state, setState] = useState({
     day: "Monday",
     days: [],
-    // you may put the line below, but will have to remove/comment hardcoded appointments variable
     appointments: {}
   });
 
-  const dailyAppointments = [];
+  const dailyAppointments = getAppointmentsForDay(state, state.day);
 
   const appt = dailyAppointments.map((appointment) => {
     return (
@@ -25,13 +25,6 @@ export default function Application(props) {
 
   const setDay = day => setState({ ...state, day });
   // const setDays = days => setState({ ...state, days });
-
-  // useEffect(() => {
-  //   const daysURL = "http://localhost:8001/api/days"
-  //   axios.get(daysURL).then(response => {
-  //     setDays(response.data)
-  //   });
-  // }, [])
 
   useEffect(() => {
     const daysURL = "/api/days"
