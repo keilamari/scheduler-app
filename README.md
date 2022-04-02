@@ -13,15 +13,15 @@ Single Page Application built using React. Tracks student interviews, and allows
 
 !["Form to create appointment"](https://github.com/keilamari/scheduler-app/blob/master/docs/create-appointment-form.png?raw=true)
 
-### Appointment saving view
+### Appointment saving view:
 
 !["Appointment saving view"](https://github.com/keilamari/scheduler-app/blob/master/docs/saving-view.png?raw=true)
 
-### Saved appointment
+### Saved appointment:
 
 !["Saved appointment"](https://github.com/keilamari/scheduler-app/blob/master/docs/appointment-saved.png?raw=true)
 
-### Confirmation to delete appointment
+### Confirmation to delete appointment:
 
 !["Confirmation to delete appointment"](https://github.com/keilamari/scheduler-app/blob/master/docs/appointment-delete.png?raw=true)
 
