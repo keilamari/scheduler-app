@@ -55,7 +55,7 @@ export default function Appointment(props) {
       {mode === SHOW && (
         <Show 
           student={props.interview.student}
-          interviewer={[props.interview.interviewer]}
+          interviewer={props.interview.interviewer}
           onDelete={() => transition(CONFIRM)}
           onEdit={() => transition(EDIT)}
         />
@@ -74,7 +74,7 @@ export default function Appointment(props) {
       {mode === EDIT &&   
         <Form 
         name={props.interview.student}
-        value={props.interview.interviewer.id}
+        value={props.interview.interviewer}
         interviewers={props.interviewers}
         onCancel={back}
         onSave={save}

@@ -5,7 +5,8 @@ export default function useApplicationData() {
   const [state, setState] = useState({
     day: "Monday",
     days: [],
-    appointments: {}
+    appointments: {},
+    interviewers: []
   });
 
   function setDay(day) {
@@ -89,6 +90,7 @@ export default function useApplicationData() {
       return res;
     });
   };
+
   return {
     state,
     setDay,
