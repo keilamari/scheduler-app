@@ -9,8 +9,6 @@ import Confirm from "./Confirm";
 import Error from "./Error";
 import useVisualMode from "hooks/useVisualMode";
 
-
-
 export default function Appointment(props) {
   const EMPTY = "EMPTY";
   const SHOW = "SHOW";
@@ -79,8 +77,8 @@ export default function Appointment(props) {
         onCancel={back}
         onSave={save}
         />}
-        {mode === ERROR_SAVE && <Error message="Unable to save appointment" onClose={() => transition(CREATE, true)}/>}
-        {mode === ERROR_DELETE && <Error message="Unable to delete appointment" onClose={() => transition(SHOW, true)}/>}
+      {mode === ERROR_SAVE && <Error message="Unable to save appointment" onClose={() => transition(CREATE, true)}/>}
+      {mode === ERROR_DELETE && <Error message="Unable to delete appointment" onClose={() => transition(SHOW, true)}/>}
     </article>
   );
 } 

@@ -15,7 +15,7 @@ export default function InterviewerList(props) {
       setInterviewer={() => props.onChange(interviewer.id)}
     />
   )
-})
+});
 InterviewerList.propTypes = {
   interviewers: PropTypes.array.isRequired
 };
@@ -25,4 +25,4 @@ InterviewerList.propTypes = {
       <ul className="interviewers__list">{InterviewersList}</ul>
     </section>
   );
-}
+};
